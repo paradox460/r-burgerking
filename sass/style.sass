@@ -1,9 +1,40 @@
 @import compass/css3
 @import partials/colors
 
+$default-border-radius: 3px
+
 body
   background: url(%%background%%) repeat
 
 
 #header
   background: $blue2
+  border-bottom: 1px solid $blue
+  color: $yellow
+
+  .pagename a
+    color: $yellow
+
+  .tabmenu
+    a
+      background: tint($red4,20%)
+      border: 1px solid $red2
+      border-bottom: 0
+      color: shade($red, 30%)
+      +border-top-radius
+    li.selected a
+      background: tint($red4, 30%)
+      border-bottom: 1px solid tint($red4, 30%)
+      color: $red
+
+#header-bottom-right
+  background-color: $yellow4
+  color: shade($yellow, 30%)
+
+  a, a:visited
+    color: shade($yellow, 30%)
+
+#userbarToggle
+  background-color: $yellow4
+  color: shade($yellow, 30%)
+  border-right: 1px solid shade($yellow, 30%)
